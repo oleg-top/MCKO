@@ -1,9 +1,9 @@
 def bubble_sort(arr):
-    '''
+    """
     Сортирует данный список при помощи алогоритма Bubble sort
     :param arr: исходный список
     :return: отсортированный список
-    '''
+    """
     for k in range(0, len(arr)):
         for i in range(0, len(arr) - 1):
             for j in range(i, len(arr) - i - 1):

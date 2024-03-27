@@ -2,17 +2,17 @@ with open('history_mirror.csv', 'r', encoding='utf-8') as file:
     data = []
     file.readline()
     for line in file:
-        date, name, verdict = line.strip().split(',')
-        temp = {'date': date, 'name': name, 'verdict': verdict}
+        date, username, verdict = line.strip().split(',')
+        temp = {'date': date, 'name': username, 'verdict': verdict}
         data.append(temp)
 
 
 def predict(name):
-    '''
+    """
     Возвращает предсказания по данным имени и отчеству
     :param name: имя и отчество, записанные с большой буквы и через пробел
     :return: найденные предсказания
-    '''
+    """
     res = []
     for el in data:
         nm = el['name'].split()
